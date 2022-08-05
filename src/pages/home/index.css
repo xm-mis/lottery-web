@@ -1,0 +1,9 @@
+.home-content{
+}
+.home-content .box{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: yellow;
+    vertical-align: middle
+}

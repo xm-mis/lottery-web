@@ -1,0 +1,9 @@
+.breadcrumbNav{
+    margin: 16px 0px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: "tnum";
+    color: #00000073;
+    font-size: 14px;
+}
