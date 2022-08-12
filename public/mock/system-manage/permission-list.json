@@ -1,0 +1,303 @@
+{
+  "success": true,
+  "code": "000000000",
+  "content": [
+    {
+      "moduleCode": "103",
+      "moduleName": "报告管理",
+      "moduleDescr": "报告管理",
+      "permissions": [
+        {
+          "permissionId": 1,
+          "permissionName": "查看",
+          "permissionDescr": "查看"
+        },
+        {
+          "permissionId": 2,
+          "permissionName": "修改",
+          "permissionDescr": "修改"
+        },
+        {
+          "permissionId": 3,
+          "permissionName": "审核",
+          "permissionDescr": "审核"
+        }
+      ]
+    },
+    {
+      "moduleCode": "102",
+      "moduleName": "告警管理",
+      "moduleDescr": "告警管理",
+      "permissions": [
+        {
+          "permissionId": 1,
+          "permissionName": "查看",
+          "permissionDescr": "查看"
+        },
+        {
+          "permissionId": 2,
+          "permissionName": "修改",
+          "permissionDescr": "修改"
+        }
+      ]
+    },
+    {
+      "moduleCode": "100",
+      "moduleName": "预警总览",
+      "moduleDescr": "预警总览",
+      "permissions": [
+        {
+          "permissionId": 1,
+          "permissionName": "查看",
+          "permissionDescr": "查看"
+        }
+      ]
+    },
+    {
+      "moduleCode": "101",
+      "moduleName": "视频监控",
+      "moduleDescr": "视频监控",
+      "children": [
+        {
+          "moduleCode": "10101",
+          "moduleName": "场景监控",
+          "moduleDescr": "场景监控",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        },
+        {
+          "moduleCode": "10102",
+          "moduleName": "全部视频",
+          "moduleDescr": "全部视频",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleCode": "104",
+      "moduleName": "配置管理",
+      "moduleDescr": "配置管理",
+      "children": [
+        {
+          "moduleCode": "10405",
+          "moduleName": "干警值班表配置",
+          "moduleDescr": "干警值班表配置",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        },
+        {
+          "moduleCode": "10404",
+          "moduleName": "人员配置",
+          "moduleDescr": "人员配置",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        },
+        {
+          "moduleCode": "10403",
+          "moduleName": "巡检配置",
+          "moduleDescr": "巡检配置",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        },
+        {
+          "moduleCode": "10402",
+          "moduleName": "摄像头配置",
+          "moduleDescr": "摄像头配置",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        },
+        {
+          "moduleCode": "10401",
+          "moduleName": "场景配置",
+          "moduleDescr": "场景配置",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleCode": "106",
+      "moduleName": "个人管理",
+      "moduleDescr": "个人管理",
+      "children": [
+        {
+          "moduleCode": "10602",
+          "moduleName": "个人中心",
+          "moduleDescr": "个人中心",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        },
+        {
+          "moduleCode": "10601",
+          "moduleName": "个人工作台",
+          "moduleDescr": "个人工作台",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "moduleCode": "105",
+      "moduleName": "系统管理",
+      "moduleDescr": "系统管理",
+      "children": [
+        {
+          "moduleCode": "10502",
+          "moduleName": "角色管理",
+          "moduleDescr": "角色管理",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        },
+        {
+          "moduleCode": "10501",
+          "moduleName": "用户管理",
+          "moduleDescr": "用户管理",
+          "permissions": [
+            {
+              "permissionId": 1,
+              "permissionName": "查看",
+              "permissionDescr": "查看"
+            },
+            {
+              "permissionId": 2,
+              "permissionName": "修改",
+              "permissionDescr": "修改"
+            }
+          ]
+        },
+        {
+          "moduleCode": "10503",
+          "moduleName": "运维管理",
+          "moduleDescr": "运维管理",
+          "children": [
+            {
+              "moduleCode": "1050302",
+              "moduleName": "资源管理",
+              "moduleDescr": "资源管理",
+              "permissions": [
+                {
+                  "permissionId": 1,
+                  "permissionName": "查看",
+                  "permissionDescr": "查看"
+                }
+              ]
+            },
+            {
+              "moduleCode": "1050301",
+              "moduleName": "日志管理",
+              "moduleDescr": "日志管理",
+              "permissions": [
+                {
+                  "permissionId": 1,
+                  "permissionName": "查看",
+                  "permissionDescr": "查看"
+                },
+                {
+                  "permissionId": 2,
+                  "permissionName": "修改",
+                  "permissionDescr": "修改"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "message": null,
+  "code": "0",
+  "content": [
+    {
+      "roleName": "系统管理员",
+      "roleDesc": "拥有系统最高权限",
+      "mTime": 1625066542000,
+      "roleId": 123,
+      "modulePermissions": {
+
+      }
+    },
+    {
+      "roleName": "组织管理员",
+      "roleDesc": "拥有系统用户管理、角色管理等组织管理权限",
+      "mTime": 1624863757000,
+      "roleId": 124
+    },
+    {
+      "roleName": "业务管理员",
+      "roleDesc": "拥有系统业务配置权限",
+      "mTime": 1624451221000,
+      "roleId": 125
+    }
+  ]
+}

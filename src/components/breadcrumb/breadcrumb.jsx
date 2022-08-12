@@ -1,16 +1,19 @@
-import * as React from 'react'
+import React from 'react'
 import { Breadcrumb } from 'antd'
 import './index.css'
+import { useLocation } from 'react-router-dom'
 
 const breadcrumbNameMap = {
-    '/apps': 'Application List',
-    '/apps/1': 'Application1',
-    '/apps/2': 'Application2',
-    '/apps/1/detail': 'Detail',
-    '/apps/2/detail': 'Detail',
+    '/layout': 'layout',
+    '/layout/home': '主页',
+    '/layout/manage': '管理',
+    '/layout/charts': '图像',
+    '/layout/2/algorithm': '算法',
   }
 
 const BreadCrumb = () =>{
+    const {pathname} = useLocation()
+
     return <nav className='breadcrumbNav'>
         <Breadcrumb separator="">
             <Breadcrumb.Item>Location</Breadcrumb.Item>

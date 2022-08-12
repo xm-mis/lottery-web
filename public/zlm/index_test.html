@@ -1,0 +1,217 @@
+<html>
+  <meta charset="utf-8">
+  <head>
+    <title>ZLM RTC demo</title>
+    <script src="./ZLMRTCClient.js"></script>
+  </head>
+    
+  <body>
+
+    <div style="text-align: center;">
+        <div>
+          <video id='video' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video2' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video3' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video4' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video5' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video6' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video7' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video8' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video9' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video10' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+          <video id='video11' controls autoplay style="text-align:left; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+
+          <video id='selfVideo' controls autoplay style="text-align:right; width:300px; height:170px">
+            Your browser is too old which doesn't support HTML5 video.
+          </video>
+        </div>
+
+        <div>
+
+            <p>
+                <label for="streamUrl">url:</label>
+                <input type="text" id='streamUrl' value="http://192.168.90.238:8081/index/api/webrtc?app=proxy&stream=19&type=play&secret=035c73f7-bb6b-4889-a715-d9eb2d1925cc" style="width: 600px;">
+            </p>
+
+            <p>
+              <label for="simulecast">simulecast:</label>
+              <input type="checkbox" id='simulecast'>
+            </p>
+            <button onclick="start()">开始</button>
+            <button onclick="stop()">停止</button>
+            
+        </div>
+    </div>
+
+    <script>
+      var player = null
+      var player2 = null
+      var player3 = null
+      var player4 = null
+      var player5 = null
+      var player6 = null
+      var player7 = null
+      var player8 = null
+      var player9 = null
+      var player10 = null
+      var player11 = null
+
+      function start()
+      {
+        stop();
+        player = new ZLMRTCClient.Endpoint(
+            {
+                element: document.getElementById('video'),// video 标签
+                debug: true,// 是否打印日志
+                zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+                simulecast:document.getElementById('simulecast').checked,
+                useCamera: false,
+                videoEnable: true,
+                audioEnable: true,
+                recvOnly: true
+            }
+        );
+        player2 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video2'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+        player3 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video3'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+        player4 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video4'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+        player5 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video5'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+        player6 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video6'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+        player7 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video7'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+        player8 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video8'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+        player9 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video9'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+        player10 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video10'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+        player11 = new ZLMRTCClient.Endpoint({
+            element: document.getElementById('video11'),// video 标签
+            zlmsdpUrl:document.getElementById('streamUrl').value,//流地址
+        });
+
+        player.on(ZLMRTCClient.Events.WEBRTC_ICE_CANDIDATE_ERROR,function(e)
+        {// ICE 协商出错
+            console.log('ICE 协商出错')
+        });
+
+        player.on(ZLMRTCClient.Events.WEBRTC_ON_REMOTE_STREAMS,function(e)
+        {//获取到了远端流，可以播放
+            console.log('播放成功',e.streams)
+        });
+
+        player.on(ZLMRTCClient.Events.WEBRTC_OFFER_ANWSER_EXCHANGE_FAILED,function(e)
+        {// offer anwser 交换失败
+            console.log('offer anwser 交换失败',e)
+        });
+
+        player.on(ZLMRTCClient.Events.WEBRTC_ON_LOCAL_STREAM,function(s)
+        {// 获取到了本地流
+
+            document.getElementById('selfVideo').srcObject=s;
+            document.getElementById('selfVideo').muted = true;
+          
+            //console.log('offer anwser 交换失败',e)
+        });
+
+      }
+
+      function stop()
+      {
+          if(player)
+          {
+            player.close();
+            player = null;
+            var local = document.getElementById('selfVideo');
+            local.removeAttribute('srcObject');
+            local.load();
+          }
+          if(player2){
+            player2.close();
+            player2 = null;
+          }
+          if(player3){
+            player3.close();
+            player3 = null;
+          }
+          if(player4){
+            player4.close();
+            player4 = null;
+          }
+          if(player5){
+            player5.close();
+            player5 = null;
+          }
+          if(player6){
+            player6.close();
+            player6 = null;
+          }
+          if(player7){
+            player7.close();
+            player7 = null;
+          }
+          if(player8){
+            player8.close();
+            player8 = null;
+          }
+          if(player9){
+            player9.close();
+            player9 = null;
+          }
+          if(player10){
+            player10.close();
+            player10 = null;
+          }
+          if(player11){
+            player11.close();
+            player11 = null;
+          }
+      }
+    </script>
+    
+  </body>
+</html>
