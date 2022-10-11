@@ -2,6 +2,8 @@ import * as React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import Menu from '../menu'
 
+const LotteryPicture = require('../../assets/images/lottery.png')
+
 import './index.css'
 
 const getItem = (label = '', key = '', icon = '', children = '', type = '') =>{
@@ -27,7 +29,9 @@ const HeaderContent = () =>{
     const { pathname } = useLocation()
 
     return <div className='header-content'>
-        <div className="logo"></div>
+        <div className="logo">
+            <img src={LotteryPicture} alt="彩票" />
+        </div>
         <Menu
             selectedKeys ={pathname.split('/').at(-1)}
             menuItems={item} 

@@ -33,7 +33,7 @@ module.exports = {
         compress: true,
         proxy:{
             '/api':{
-                target: 'https://webapi.sporttery.cn/',
+                target: 'https://webapi.sporttery.cn/gateway/lottery',
                 pathRewrite: { '^/api': '' },
                 changeOrigin: true,
             }

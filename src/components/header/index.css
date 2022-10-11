@@ -8,10 +8,18 @@
     padding: 0 50px;
 }
 .header-content .logo{
-    width: 120px;
-    height: 31px;
-    margin: 16px 24px 16px 0;
-    background: rgba(255, 255, 255, 0.2)
+    width: 100px;
+    height: 43px;
+    margin: 10px 24px 10px 0;
+    /* background: rgba(255, 255, 255, 0.2); */
+    line-height: 43px;
+    /* background-image: url('../../assets/images/lottery.png'); */
+    /* background-repeat: no-repeat; */
+}
+
+.header-content .logo img {
+    width: 100px;
+    height: 100%;
 }
 
 .header-content .menu-content {

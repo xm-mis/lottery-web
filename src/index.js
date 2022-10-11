@@ -6,6 +6,7 @@ import RoutesContent from '@common/routes'
 import '@common/common.css'
 // import './index.css'
 
+import './icons'
 
 import {ConfigProvider,locales} from 'antd'
 

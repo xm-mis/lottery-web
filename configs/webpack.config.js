@@ -59,6 +59,18 @@ module.exports = (env) => {
                     }
                 },
                 {
+                    test: /^((?!\.color).)*((?!\.color).)\.svg$/,
+                    include: [resolveApp('src/icons')],
+                    use: [
+                      {
+                        loader: 'svg-sprite-loader',
+                      },
+                      {
+                        loader: 'svgo-loader',
+                      },
+                    ],
+                },
+                {
                     test: /\.(png|jpg|gif)$/,
                     type: 'asset/resource',
                     generator: {
@@ -85,7 +97,8 @@ module.exports = (env) => {
               '@pages': resolveApp('src/pages'),
               '@com': resolveApp('src/components'),
               '@public': resolveApp('public'),
-              '@common': resolveApp('src/common')
+              '@common': resolveApp('src/common'),
+              '@icons': resolveApp('src/icons')
             },
         },
         optimization: {

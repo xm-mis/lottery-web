@@ -1,0 +1,7 @@
+.algorithm-layout{
+    padding: 20px;
+}
+
+.algorithm-layout> .algorithm-input{
+    width: 200px;
+}
