@@ -5,3 +5,30 @@
 .algorithm-layout> .algorithm-input{
     width: 200px;
 }
+
+.algorithm-layout> .methods-box{
+    width: 300px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    line-clamp: 2;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+} 
+
+/* 
+    white-space: nowrap; // 禁止换行  对于连续数字或英文字母可省略
+    多行文本 
+        line-clamp: 2 两行 换行
+        对于一些内核是webkit浏览器：比如chrome， safari
+        display: -wehkit-box
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 2
+        对于汉字上列可进行换行，而一堆字母或数字会被浏览器认为是一个单词，按道理一个单词是不应该被分割，所以说浏览器就不给换行
+        而针对于该特点  加一个属性word-wrap： break-word //作用是内容将在边界内换行
+        word-wrap:break-word
+*/
+
+

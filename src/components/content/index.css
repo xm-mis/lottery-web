@@ -6,5 +6,7 @@
 }
 .content-main .content-body{
     flex: 1;
+    overflow-y: auto;
     background-color: #ffffff;
+    margin-bottom: 50px;
 }
